@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Copying</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .nocopy {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="nocopy">Aaj ke liye filhal itna hi Aap ki tarah me bhi maayush hu Lekin ummed par duniya kayam hai Dil dukha hai lekin toota toh nhi Or ummed ka daman chutaa toh nhi hai!</p>
+
+    <script>
+        document.addEventListener("copy", function(event) {
+            event.preventDefault(); // Prevent default copy behavior
+            navigator.clipboard.writeText("Adarsh copy nhi kr paye na"); // Replace copied text with "Adarsh copy nhi kr paye na"
+             // Show alert (optional)
+        });
+    </script>
+
+</body>
+</html>
